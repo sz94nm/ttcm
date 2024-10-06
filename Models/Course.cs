@@ -8,5 +8,6 @@
         public DateTime EndDate { get; set; }
         public bool IsActive { get; set; }
         public int TrainerId { get; set; } // 
+
     }
 }
