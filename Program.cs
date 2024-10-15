@@ -1,8 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using ttcm_api.Data;
 using ttcm_api.Interfaces;
 using ttcm_api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlite("Data Source=app.db"));
 // Add services to the container.
 builder.Services.AddScoped<IProgramCRUD, ProgramsService>();
 builder.Services.AddScoped<ITrainerService, TrainerService>();
