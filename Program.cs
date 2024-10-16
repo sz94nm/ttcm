@@ -6,7 +6,7 @@ using ttcm_api.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlite("Data Source=app.db"));
+    options.UseSqlite("Data Source=Data/app.db"));
 // Add services to the container.
 builder.Services.AddScoped<IProgramCRUD, ProgramsService>();
 builder.Services.AddScoped<ITrainerService, TrainerService>();
