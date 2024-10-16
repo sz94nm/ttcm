@@ -5,7 +5,7 @@ using ttcm_api.Models;
 
 namespace ttcm_api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class CategoryController : ControllerBase
     {
